@@ -1,0 +1,31 @@
+{
+  "name": "06-jobs-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "*",
+    "cors": "*",
+    "dotenv": "*",
+    "express": "*",
+    "express-async-errors": "*",
+    "express-rate-limit": "*",
+    "helmet": "*",
+    "http-status-codes": "*",
+    "joi": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "rate-limiter": "*",
+    "swagger-ui-express": "*",
+    "xss-clean": "*",
+    "yamljs": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
