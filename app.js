@@ -6,6 +6,10 @@ const app = express();
 
 // routes
 const authRouter = require("./routes/auth");
+const jobsRouter = require("./routes/jobs");
+
+// middleware
+const authenticateUser = require("./middleware/authenticate");
 
 // error handler
 const notFoundMiddleware = require("./middleware/not-found");
@@ -19,6 +23,7 @@ app.get("/", (req, res) => {
   res.send("jobs api");
 });
 app.use("/api/auth", authRouter);
+app.use("/api/jobs", authenticateUser, jobsRouter);
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
